@@ -19,23 +19,11 @@ height
         
     :rtype: number
     
-     ``css('height')`` 和 ``height()`` 的区别在于 ``height()`` 返回不带单位的纯数值,
-     而 ``css('height')`` 则返回带单位的原始值(例如 ``40%`` ).
-    当需要数值计算时, 推荐该方法, 如图所示：(from jquery)
+    ``height()`` 返回不带单位的纯数值, 如图所示：(from jquery)
 
     .. raw:: html
 
         <img  src='http://docs.kissyui.com/source/raw/api/core/node/height.png' />
-    
-
-        该方法也可以用来得到 windw 和 document 的高度
-
-    .. code-block:: javascript
-
-
-          KISSY.all(window).height(); // 得到浏览器可以区域的高度, 相当于 DOM.viewportHeight()
-          KISSY.all(document).height(); //得到 html 文档的高度, 相当于 DOM.docHeight()
-
 
 
 

@@ -24,13 +24,14 @@ item
 
     .. code-block:: html
 
-        <div class='a' id='a'>
+        <div class='a a1'>
         </div>
-        <div class='a' id='b'>
+        <div class='a a2'>
         </div>
 
         <script>
-            KISSY.all(".a").item(0).attr("id")  // => a
-            KISSY.all(".a").item(1).attr("id")  // => b
-            KISSY.all(".a").item(2)  // => null
+            KISSY.all(".a").item(0).hasClass("a1")  // => true
+            KISSY.all(".a").item(1).hasClass("a1")  // => false
+            KISSY.all(".a").item(0).hasClass("a2")  // => false
+            KISSY.all(".a").item(1).hasClass("a2")  // => true
         </script>
