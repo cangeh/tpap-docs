@@ -28,19 +28,19 @@ Methods
 
     .. code-block:: html
 
-        <div class='a' id='a'>
+        <div class='a' data-id='a'>
         </div>
-        <div class='a' id='b'>
+        <div class='a' data-id='b'>
         </div>
-        <div class='a' id='c'>
+        <div class='a' data-id='c'>
         </div>
-        <div class='a' id='d'>
+        <div class='a' data-id='d'>
         </div>
 
         <script>
             var as=KISSY.all(".a");
             var subs=as.slice(1,3); // => subs != as
             subs.length // => 2
-            subs.item(0).attr("id") // => b
-            subs.item(1).attr("id") // => c
+            subs.item(0).attr("data-id") // => b
+            subs.item(1).attr("data-id") // => c
         </script>

@@ -14,7 +14,7 @@ hide
 .. method:: NodeList.hide
 
     | NodeList **hide** ( [ speed, callback ] )
-    | 当前节点列表元素以动画效果隐藏
+    | 当前节点列表元素以动画效果隐藏，没有参数的效果是所有元素直接隐藏
         
     :param number speed: 单位秒, 动画持续时间, 不设置无动画
     :param function callback: 每个动画结束后回调函数

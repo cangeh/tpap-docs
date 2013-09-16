@@ -27,3 +27,26 @@ cal.on('select', function (e) {
 cal.on('monthChange',function(e){
     console.log(e.date);
 });
+
+
+//range
+new Calendar('.J_Range', {
+    pages:2,
+    rangeSelect:true,
+    popup:false
+}).on('rangeSelect', function(e) {
+        KISSY.alert(new Date(e.start) + ' ' + new Date(e.end));
+});
+
+var showdate = function(n, d) {
+    var uom = new Date(d - 0 + n * 86400000);
+    uom = uom.getFullYear() + "/" + (uom.getMonth() + 1) + "/" + uom.getDate();
+    return new Date(uom);
+};
+
+
+c = new Calendar('.J_MinDateMaxDate', {
+    minDate:new Date(),
+    maxDate:showdate(10, new Date()),
+    popup:false
+});

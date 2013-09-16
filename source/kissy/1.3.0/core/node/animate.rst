@@ -21,17 +21,9 @@ animate
     .. code-block:: javascript
 
         var node=KISSY.all(".foo");
-        node.animate(...);
+        node.animate(...);     //对每一个class为foo的元素都进行动画
 
-    相当于：
-
-    .. code-block:: javascript
-
-        KISSY.query(".foo").each(function(n){
-            new KISSY.Anim(n,...).run();
-        });
-
-    所以详细参数请参考 : :class:`~anim.Anim`  构造器接口.
+    所有详细参数请参考 : :class:`~anim.Anim`  构造器接口.
 
     .. note::
 

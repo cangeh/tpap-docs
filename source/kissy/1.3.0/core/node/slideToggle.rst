@@ -5,12 +5,12 @@ slideToggle
 
 
 
-Module
+组件
 -----------------------------------------------
 
   :mod:`node`
 
-Methods
+方法
 -----------------------------------------------
 
 .. method:: NodeList.slideToggle

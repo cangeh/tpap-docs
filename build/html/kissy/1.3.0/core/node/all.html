@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 
-<title>KISSY.all &mdash; OPENJS-v1.0 Document</title>
+<title>all &mdash; OPENJS-v1.0 Document</title>
 
 <link rel="stylesheet" href="http://g.tbcdn.cn/kissy/k/1.3.1/css/dpl/base-min.css"/>
 <link rel="stylesheet" href="../../../../_static/kissy.css"/>
@@ -44,14 +44,14 @@
 margin: 0 auto;
 color: white;
 font-weight: bold;
-font-size: 44px;padding-left: 100px;">开放JS</h2>
+font-size: 44px;padding-left: 100px;"><!--TPAP(Third Party Access Policy)--></h2>
 
 </a></h1>
 <div id="header">
 
 
     <ul class="navigation">
-        <li><a href="http://docs.kissyui.com">导航在这</a></li>
+        <li><a href="/">首页</a></li>
     </ul>
 <div id="searchbox" class="searchbox">
     <form class="search" action="../../../../search.html" method="get">
@@ -80,19 +80,29 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
     <li class="right" >
       <a href="../../../../py-modindex.html" title="Python Module Index"
          >模块</a> | </li>
-    <li><a href="../../../../index.html">OPENJS-v1.0 Document</a> &#187; </li> 
+    <li class="right" >
+      <a href="getDOMNodes.html" title="getDOMNodes"
+         accesskey="N">下一页</a> | </li>
+    <li class="right" >
+      <a href="nodelist.html" title="NodeList"
+         accesskey="P">上一页</a> | </li>
+    <li><a href="../../../../index.html">OPENJS-v1.0 Document</a> &#187; </li>
+      <li><a href="../../../index.html" >KISSY</a> &#187; </li>
+      <li><a href="../../index.html" >KISSY-v1.3.0</a> &#187; </li>
+      <li><a href="../index.html" >core模块</a> &#187; </li>
+      <li><a href="index.html" accesskey="U">node</a> &#187; </li> 
     </ul>
 </div>
 					<div class="body">
-  <div class="section" id="kissy-all">
-<h1>KISSY.all<a class="headerlink" href="#kissy-all" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="all">
+<h1>all<a class="headerlink" href="#all" title="永久链接至标题">¶</a></h1>
 <div class="line-block">
 <div class="line">该方法的快捷方式为 <tt class="docutils literal"><span class="pre">KISSY.all</span></tt></div>
 </div>
 <div class="section" id="id1">
 <h2>组件<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <blockquote>
-<div><tt class="xref py py-mod docutils literal"><span class="pre">node</span></tt></div></blockquote>
+<div><a class="reference internal" href="index.html#module-node" title="node"><tt class="xref py py-mod docutils literal"><span class="pre">node</span></tt></a></div></blockquote>
 </div>
 <div class="section" id="id2">
 <h2>方法<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
@@ -111,7 +121,7 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">param HTMLElement|Document|NodeList context:</th></tr>
 <tr class="field-even field"><td>&nbsp;</td><td class="field-body"><p class="first">选择器上下文,</p>
-<p>格式参照 <tt class="xref py py-func docutils literal"><span class="pre">dom.query()</span></tt> ，增加了 <a class="reference internal" href="nodelist.html#node.NodeList" title="node.NodeList"><tt class="xref py py-class docutils literal"><span class="pre">NodeList</span></tt></a> 支持.</p>
+<p>格式参照 <a class="reference internal" href="../dom/query.html#dom.query" title="dom.query"><tt class="xref py py-func docutils literal"><span class="pre">dom.query()</span></tt></a> ，增加了 <a class="reference internal" href="nodelist.html#node.NodeList" title="node.NodeList"><tt class="xref py py-class docutils literal"><span class="pre">NodeList</span></tt></a> 支持.</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body"><p class="first last">NodeList</p>
@@ -169,84 +179,41 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
 <p>默认情况下是在文档根节点开始依据选择器字符串开始匹配元素查找. 但是一个上下文可以作为可选的第二个参数来限定查找范围, 例如在事件处理器
 范围内进行查找匹配元素：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">$</span><span class="o">=</span><span class="nx">KISSY</span><span class="p">.</span><span class="nx">all</span><span class="p">;</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;div.foo&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">);</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;div.foo&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
 </div>
-<p>当对 <tt class="docutils literal"><span class="pre">span</span></tt> 的选择限定在 this 中时, 只有位于点击元素内的 span 节点会被设置格外的 class.也可以通过 <tt class="docutils literal"><span class="pre">$(this).all(&quot;span&quot;)</span></tt> 来实现限定搜索范围.</p>
+<p>当对 <tt class="docutils literal"><span class="pre">span</span></tt> 的选择限定在 e.target 中时, 只有位于点击元素内的 span 节点会被设置格外的 class.也可以通过 <tt class="docutils literal"><span class="pre">$(e.target).all(&quot;span&quot;)</span></tt> 来实现限定搜索范围.</p>
 <p><strong>使用原生 DOM 节点</strong></p>
 <p>第二, 第三种方法使用现有的原生 dom 节点来创建 NodeList 对象. 常用的应用场景是从事件处理器的 this 关键字中创建 NodeList 对象</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">$</span><span class="o">=</span><span class="nx">KISSY</span><span class="p">.</span><span class="nx">all</span><span class="p">;</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;div.foo&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">slideUp</span><span class="p">();</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;div.foo&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">).</span><span class="nx">slideUp</span><span class="p">();</span>
 <span class="p">});</span>
 </pre></div>
 </div>
-<p>这个例子会导致元素点击时以滑动的效果隐藏. 因为事件处理器中的 this 默认指向原生 dom 节点, 在调用 slideUp 方法前一定要通过 KISSY.all 构建 NodeList 对象.</p>
+<p>这个例子会导致元素点击时以滑动的效果隐藏. 因为事件处理器中的 e.target 默认指向原生 dom 节点, 在调用 slideUp 方法前一定要通过 KISSY.all 构建 NodeList 对象.</p>
 <p><strong>克隆 NodeList 对象</strong></p>
 <p>当一个 NodeList 对象作为参数传递给 KISSY.all 时, 会返回该对象的克隆对象. 返回的克隆对象和源对象指向同一个原生 dom 节点集合.</p>
-<div class="line-block">
-<div class="line">NodeList <strong>KISSY.all</strong> ( html , [ ownerDocument ] )</div>
-</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">param string html:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">用来得到 dom 节点的 html 字符串</td>
-</tr>
-<tr class="field-even field"><th class="field-name" colspan="2">param HTMLDocument ownerDocument:</th></tr>
-<tr class="field-even field"><td>&nbsp;</td><td class="field-body">创建的新节点所在的文档</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">NodeList</td>
-</tr>
-</tbody>
-</table>
-<p>如果一个字符串传递给 KISSY.all 作为参数, KISSY.all 会检查该字符粗韩是否像一个html串(例如形式为 &lt;tag ... &gt;). 如果不是, 那么字符串参数就会作为一个选择器字符串, 进行选择元素操作. 如果字符串是一个html片段, 那么就会创建相应的 dom 节点, 并且返回一个新的 NodeList 对象指向产生的 dom 节点.</p>
-<div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p>为了确保各个浏览器的兼容性, html 片段必须是结构完整的, 例如, 包含结束标签：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">KISSY</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s2">&quot;&lt;a href=&#39;http://docs.kissyui.com&#39;&gt;&lt;/a&gt;&quot;</span><span class="p">);</span>
-</pre></div>
-</div>
-<p>如果创建单个元素不带任何属性和子节点, 也可以</p>
-<div class="last highlight-javascript"><div class="highlight"><pre><span class="nx">KISSY</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s2">&quot;&lt;a&gt;&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
 </div></blockquote>
 </div>
 <div class="section" id="demo">
 <h2>Demo<a class="headerlink" href="#demo" title="永久链接至标题">¶</a></h2>
 <blockquote>
-<div><p><strong>得到一个包装新 dom element 的 KISSY NodeList</strong></p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">nl</span><span class="o">=</span><span class="nx">KISSY</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s2">&quot;&lt;div&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&quot;</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">domNodes</span><span class="o">=</span><span class="nx">nl</span><span class="p">.</span><span class="nx">getDOMNodes</span><span class="p">();</span>
-<span class="nx">domNodes</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">nodeType</span> <span class="o">==</span> <span class="mi">1</span> <span class="c1">// =&gt; true : Html Element</span>
-</pre></div>
-</div>
-<p><strong>得到一个包装现有 dom element 的 KISSY NodeList</strong></p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">domNodes</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">nl</span><span class="o">=</span><span class="nx">KISSY</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="nx">domNodes</span><span class="p">);</span>
-<span class="nx">domNodes</span><span class="o">=</span><span class="nx">nl</span><span class="p">.</span><span class="nx">getDOMNodes</span><span class="p">();</span>
-<span class="nx">domNodes</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">nodeType</span> <span class="o">==</span> <span class="mi">1</span> <span class="c1">// =&gt; true : Html Element</span>
-<span class="nx">domNodes</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">nodeType</span> <span class="o">==</span> <span class="mi">1</span> <span class="c1">// =&gt; true : Html Element</span>
-</pre></div>
-</div>
-<p><strong>当然 NodeList.all 可以直接获取选择器字符串匹配的节点列表</strong></p>
+<div><p><strong>NodeList.all 可以直接获取选择器字符串匹配的节点列表</strong></p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">nl</span><span class="o">=</span><span class="nx">KISSY</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">);</span> <span class="c1">// 选择器功能而不是创建 text node</span>
 <span class="nx">domNodes</span><span class="o">=</span><span class="nx">nl</span><span class="p">.</span><span class="nx">getDOMNodes</span><span class="p">();</span>
 <span class="nx">domNodes</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">nodeType</span> <span class="o">==</span> <span class="mi">1</span> <span class="c1">// =&gt; true : Html Element</span>
 <span class="nx">domNodes</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">nodeType</span> <span class="o">==</span> <span class="mi">1</span> <span class="c1">// =&gt; true : Html Element</span>
 </pre></div>
 </div>
-<p><strong>找到页面第一个表单的所有输入框</strong></p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">KISSY</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s2">&quot;input&quot;</span><span class="p">,</span><span class="nb">document</span><span class="p">.</span><span class="nx">forms</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<p><strong>找到表单内的所有输入框</strong></p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">KISSY</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s2">&quot;input&quot;</span><span class="p">,</span><span class="s2">&quot;form&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
-<p><strong>设置页面的背景色为黑色</strong></p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">KISSY</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">&quot;background&quot;</span><span class="p">,</span><span class="s2">&quot;black&quot;</span><span class="p">);</span>
+<p><strong>设置输入框的内容</strong></p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">KISSY</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s2">&quot;input&quot;</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="s2">&quot;12&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p><strong>隐藏一个表单内的所有输入框</strong></p>
@@ -270,7 +237,17 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
     <li class="right" >
       <a href="../../../../py-modindex.html" title="Python Module Index"
          >模块</a> | </li>
-    <li><a href="../../../../index.html">OPENJS-v1.0 Document</a> &#187; </li> 
+    <li class="right" >
+      <a href="getDOMNodes.html" title="getDOMNodes"
+         accesskey="N">下一页</a> | </li>
+    <li class="right" >
+      <a href="nodelist.html" title="NodeList"
+         accesskey="P">上一页</a> | </li>
+    <li><a href="../../../../index.html">OPENJS-v1.0 Document</a> &#187; </li>
+      <li><a href="../../../index.html" >KISSY</a> &#187; </li>
+      <li><a href="../../index.html" >KISSY-v1.3.0</a> &#187; </li>
+      <li><a href="../index.html" >core模块</a> &#187; </li>
+      <li><a href="index.html" accesskey="U">node</a> &#187; </li> 
     </ul>
 </div>
 					<div id="disqus_thread"></div>
@@ -316,8 +293,82 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
 
 <div class="s-box">
     <div class="s-box-bd">
-        <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index.html">KISSY文档-v1.3.0</a></li>
+        <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">KISSY</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">KISSY-v1.3.0</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">core模块</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">node</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="nodelist.html">NodeList</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="">all</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="getDOMNodes.html">getDOMNodes</a></li>
+<li class="toctree-l5"><a class="reference internal" href="getDOMNode.html">getDOMNode</a></li>
+<li class="toctree-l5"><a class="reference internal" href="end.html">end</a></li>
+<li class="toctree-l5"><a class="reference internal" href="equals.html">equals</a></li>
+<li class="toctree-l5"><a class="reference internal" href="add.html">add</a></li>
+<li class="toctree-l5"><a class="reference internal" href="item.html">item</a></li>
+<li class="toctree-l5"><a class="reference internal" href="slice.html">slice</a></li>
+<li class="toctree-l5"><a class="reference internal" href="scrollTop.html">scrollTop</a></li>
+<li class="toctree-l5"><a class="reference internal" href="scrollLeft.html">scrollLeft</a></li>
+<li class="toctree-l5"><a class="reference internal" href="height.html">height</a></li>
+<li class="toctree-l5"><a class="reference internal" href="width.html">width</a></li>
+<li class="toctree-l5"><a class="reference internal" href="appendTo.html">appendTo</a></li>
+<li class="toctree-l5"><a class="reference internal" href="prependTo.html">prependTo</a></li>
+<li class="toctree-l5"><a class="reference internal" href="insertBefore.html">insertBefore</a></li>
+<li class="toctree-l5"><a class="reference internal" href="insertAfter.html">insertAfter</a></li>
+<li class="toctree-l5"><a class="reference internal" href="animate.html">animate</a></li>
+<li class="toctree-l5"><a class="reference internal" href="stop.html">stop</a></li>
+<li class="toctree-l5"><a class="reference internal" href="pause.html">pause</a></li>
+<li class="toctree-l5"><a class="reference internal" href="resume.html">resume</a></li>
+<li class="toctree-l5"><a class="reference internal" href="isRunning.html">isRunning</a></li>
+<li class="toctree-l5"><a class="reference internal" href="isPaused.html">isPaused</a></li>
+<li class="toctree-l5"><a class="reference internal" href="show.html">show</a></li>
+<li class="toctree-l5"><a class="reference internal" href="hide.html">hide</a></li>
+<li class="toctree-l5"><a class="reference internal" href="toggle.html">toggle</a></li>
+<li class="toctree-l5"><a class="reference internal" href="fadeIn.html">fadeIn</a></li>
+<li class="toctree-l5"><a class="reference internal" href="fadeOut.html">fadeOut</a></li>
+<li class="toctree-l5"><a class="reference internal" href="fadeToggle.html">fadeToggle</a></li>
+<li class="toctree-l5"><a class="reference internal" href="slideDown.html">slideDown</a></li>
+<li class="toctree-l5"><a class="reference internal" href="slideUp.html">slideUp</a></li>
+<li class="toctree-l5"><a class="reference internal" href="slideToggle.html">slideToggle</a></li>
+<li class="toctree-l5"><a class="reference internal" href="clone.html">clone</a></li>
+<li class="toctree-l5"><a class="reference internal" href="empty.html">empty</a></li>
+<li class="toctree-l5"><a class="reference internal" href="contains.html">contains</a></li>
+<li class="toctree-l5"><a class="reference internal" href="filter.html">filter</a></li>
+<li class="toctree-l5"><a class="reference internal" href="first.html">first</a></li>
+<li class="toctree-l5"><a class="reference internal" href="last.html">last</a></li>
+<li class="toctree-l5"><a class="reference internal" href="next.html">next</a></li>
+<li class="toctree-l5"><a class="reference internal" href="prev.html">prev</a></li>
+<li class="toctree-l5"><a class="reference internal" href="innerHeight.html">innerHeight</a></li>
+<li class="toctree-l5"><a class="reference internal" href="innerWidth.html">innerWidth</a></li>
+<li class="toctree-l5"><a class="reference internal" href="outerWidth.html">outerWidth</a></li>
+<li class="toctree-l5"><a class="reference internal" href="outerHeight.html">outerHeight</a></li>
+<li class="toctree-l5"><a class="reference internal" href="parent.html">parent</a></li>
+<li class="toctree-l5"><a class="reference internal" href="remove.html">remove</a></li>
+<li class="toctree-l5"><a class="reference internal" href="replaceWith.html">replaceWith</a></li>
+<li class="toctree-l5"><a class="reference internal" href="scrollIntoView.html">scrollIntoView</a></li>
+<li class="toctree-l5"><a class="reference internal" href="siblings.html">siblings</a></li>
+<li class="toctree-l5"><a class="reference internal" href="test.html">test</a></li>
+<li class="toctree-l5"><a class="reference internal" href="val.html">val</a></li>
+<li class="toctree-l5"><a class="reference internal" href="children.html">children</a></li>
+<li class="toctree-l5"><a class="reference internal" href="node-index.html">index</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../ajax/index.html">ajax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../anim/index.html">anim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dom/index.html">dom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../event/index.html">event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ua/index.html">ua</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../components/index.html">组件API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gallery/index.html">Kissy Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../alimap/index.html">阿里地图</a></li>
 </ul>
 
     </div>
@@ -325,22 +376,6 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
     </div>
     <div class="col-extra">
         
-	<div class="s-box">
-		<div class="s-box-hd">
-			<h3>本页快速导航</h3>
-		</div>
-		<div class="s-box-bd">
-			<ul>
-<li><a class="reference internal" href="#">KISSY.all</a><ul>
-<li><a class="reference internal" href="#id1">组件</a></li>
-<li><a class="reference internal" href="#id2">方法</a></li>
-<li><a class="reference internal" href="#demo">Demo</a></li>
-</ul>
-</li>
-</ul>
-
-		</div>
-	</div>
 
     </div>
 	</div>
@@ -351,7 +386,7 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
     </script>
 </div>
 <div id="footer">
-    &copy; Copyright 2013~2023,  Created by 开放JavaScript-Team
+    &copy; Copyright 2013~2023,  Created by TPAP-Team
 </div>
 </body>
 </html>

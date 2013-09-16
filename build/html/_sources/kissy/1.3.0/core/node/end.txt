@@ -16,9 +16,18 @@ end
 .. method:: NodeList.prototype.end
 
     | NodeList **end** ()
-    | 得到上一次 KISSY.all.all` 操作前的 NodeList 对象
+    | 得到上一次 KISSY.all` 操作前的 NodeList 对象
     
     :returns: 上一步的节点列表对象
+
+
+    .. code-block:: html
+
+            <p id='p1'>1</p><p id='p2'>2</p>
+
+            <script>
+                var KISSY.all('.dom-child1').all('.dom-child2').end(); // KISSY.all('.dom-child1')
+            </script>
     
     
     .. hint::

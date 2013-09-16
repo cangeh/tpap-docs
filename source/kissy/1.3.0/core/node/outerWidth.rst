@@ -16,11 +16,10 @@ outerWidth
 
 .. function:: outerWidth
 
-    | Number **outerWidth** ( selector)
-    | 获取符合选择器的第一个元素的宽度值, 注意: **该值除了包含元素本身宽度和 padding 外, 还包含 border或margin** .
+    | Number **outerWidth** ( )
+    | 获取当前NodeList的第一个元素的宽度值, 注意: **该值除了包含元素本身宽度和 padding 外, 还包含 border或margin** .
     
-    :param string|HTMLCollection|Array<HTMLElement> selector: 字符串格式参见 :ref:`KISSY selector <dom-selector>`
-    :returns: 符合选择器的第一个元素的宽度值. 不包含 margin, 仅包含 border
+    :returns: 当前NodeList的第一个元素的宽度值. 不包含 margin, 仅包含 border
     :rtype: Number
 
     .. code-block:: html

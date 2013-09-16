@@ -40,7 +40,7 @@ clone
 
     .. code-block:: javascript
 
-        KISSY.one('.hello').appendTo('.goodbye');
+        KISSY.all('.hello').appendTo('.goodbye');
 
     产生的 dom 结构如下：
 
@@ -57,7 +57,7 @@ clone
 
     .. code-block:: javascript
 
-        KISSY.one('.hello').clone(true).appendTo('.goodbye');
+        KISSY.all('.hello').clone(true).appendTo('.goodbye');
 
     这就会产生：
 
@@ -88,8 +88,8 @@ clone
 
         .. code-block:: html
 
-            var elem=KISSY.all(".hello").attr("custom",{x:1});
-            elem.clone().attr("custom",{x:2});
+            var elem=KISSY.all(".hello").attr("data-custom","1");
+            elem.clone().attr("data-custom","1");
         
         
 

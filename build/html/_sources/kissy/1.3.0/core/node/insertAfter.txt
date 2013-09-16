@@ -20,10 +20,8 @@ insertAfter
     :param HTMLElement|string|NodeList target: 将要插入的元素
                                         
         * string : 选择器字符串
-        * HTMLElement|NodeList : 已有或新建的元素
-                                        
-    :meth:`~NodeList.after` 和该方法的功能一样, 只不过参数意义不同, 该函数表示当前节点列表被插入到参数目标节点之后,
-    而 ``after`` 则表示参数节点被插入到当前节点之后.
+        * HTMLElement|NodeList : 已有元素
+
 
     .. code-block:: html
 
@@ -33,25 +31,8 @@ insertAfter
           <div class="inner">Goodbye</div>
         </div>
 
-    我们可以创建节点并立即把它插入到一些元素之前
-
-    .. code-block:: javascript
-
-        KISSY.all('<p>Test</p>').insertAfter('.inner');
-
-    结果为
-
-    .. code-block:: html
-
-        <div class="container">
-          <h2>Greetings</h2>
-          <div class="inner">Hello</div>
-          <p>Test</p>
-          <div class="inner">Goodbye</div>
-          <p>Test</p>
-        </div>
     
-    我们也可以操纵现有元素
+    我们操纵现有元素
 
     .. code-block:: javascript
 
@@ -68,5 +49,26 @@ insertAfter
         <h2>Greetings</h2>
 
     如果有多个目标节点, 那么除了第一个目标节点外, 其他目标节点前会被插入当前节点的克隆
+
+
+demo 代码样例
+-----------------------------------------------
+
+
+    **基本的Anim以及方法的示例**
+
+    .. raw:: html
+
+       <iframe width="100%" height="300"  class="iframe-demo" src="http://tpap-docs.taegrid.taobao.com/kissy/1.3.0/core/node/after.php"></iframe>
+
+    **对应DEMO html/php的代码**
+
+    .. literalinclude:: /raw/tpap/kissy/1.3.0/core/node/after.php
+       :language: html
+
+    **对应DEMO javascript的代码**
+
+    .. literalinclude:: /raw/tpap/kissy/1.3.0/core/node/after.js
+       :language: javascript
 
 

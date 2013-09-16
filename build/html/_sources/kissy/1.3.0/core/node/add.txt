@@ -37,5 +37,5 @@ add
         <script>
             var pdiv = $("p");
             var all=pdiv.add("div");  //  pdiv will not change
-            all.css("color","red"); // => 1,2 都为红字
+            all.text("12"); // => p和div的内容都变成了12
         </script>

@@ -1,6 +1,6 @@
 ﻿.. currentmodule:: node
 
-KISSY.all
+all
 ==================================================
 
 |  该方法的快捷方式为 ``KISSY.all``
@@ -57,11 +57,11 @@ KISSY.all
     .. code-block:: javascript
 
         var $=KISSY.all;
-        $('div.foo').on("click",function() {
-          $('span', this).addClass('bar');
+        $('div.foo').on("click",function(e) {
+          $('span', e.target).addClass('bar');
         });
 
-    当对 ``span`` 的选择限定在 this 中时, 只有位于点击元素内的 span 节点会被设置格外的 class.也可以通过 ``$(this).all("span")`` 来实现限定搜索范围.
+    当对 ``span`` 的选择限定在 e.target 中时, 只有位于点击元素内的 span 节点会被设置格外的 class.也可以通过 ``$(e.target).all("span")`` 来实现限定搜索范围.
 
 
     **使用原生 DOM 节点**
@@ -71,11 +71,11 @@ KISSY.all
     .. code-block:: javascript
 
         var $=KISSY.all;
-        $('div.foo').on("click",function() {
-          $(this).slideUp();
+        $('div.foo').on("click",function(e.target) {
+          $(e.target).slideUp();
         });
 
-    这个例子会导致元素点击时以滑动的效果隐藏. 因为事件处理器中的 this 默认指向原生 dom 节点, 在调用 slideUp 方法前一定要通过 KISSY.all 构建 NodeList 对象.
+    这个例子会导致元素点击时以滑动的效果隐藏. 因为事件处理器中的 e.target 默认指向原生 dom 节点, 在调用 slideUp 方法前一定要通过 KISSY.all 构建 NodeList 对象.
 
 
     **克隆 NodeList 对象**
@@ -83,51 +83,12 @@ KISSY.all
     当一个 NodeList 对象作为参数传递给 KISSY.all 时, 会返回该对象的克隆对象. 返回的克隆对象和源对象指向同一个原生 dom 节点集合.
 
 
-    | NodeList **KISSY.all** ( html , [ ownerDocument ] )
-
-    :param string html: 用来得到 dom 节点的 html 字符串
-    :param HTMLDocument ownerDocument: 创建的新节点所在的文档
-    :rtype: NodeList
-
-
-    如果一个字符串传递给 KISSY.all 作为参数, KISSY.all 会检查该字符粗韩是否像一个html串(例如形式为 <tag ... >). 如果不是, 那么字符串参数就会作为一个选择器字符串, 进行选择元素操作. 如果字符串是一个html片段, 那么就会创建相应的 dom 节点, 并且返回一个新的 NodeList 对象指向产生的 dom 节点.
-
-    .. note::
-        为了确保各个浏览器的兼容性, html 片段必须是结构完整的, 例如, 包含结束标签：
-
-        .. code-block:: javascript
-
-            KISSY.all("<a href='http://docs.kissyui.com'></a>");
-
-        如果创建单个元素不带任何属性和子节点, 也可以
-
-        .. code-block:: javascript
-
-            KISSY.all("<a>")
 
 Demo
 --------------------------------------------------
 
 
-    **得到一个包装新 dom element 的 KISSY NodeList**
-
-    .. code-block:: javascript
-
-        var nl=KISSY.all("<div></div><p></p>");
-        var domNodes=nl.getDOMNodes();
-        domNodes[0].nodeType == 1 // => true : Html Element
-
-    **得到一个包装现有 dom element 的 KISSY NodeList**
-
-    .. code-block:: javascript
-
-        var domNodes=document.getElementsByTagName("div");
-        var nl=KISSY.all(domNodes);
-        domNodes=nl.getDOMNodes();
-        domNodes[0].nodeType == 1 // => true : Html Element
-        domNodes[0].nodeType == 1 // => true : Html Element
-
-    **当然 NodeList.all 可以直接获取选择器字符串匹配的节点列表**
+    **NodeList.all 可以直接获取选择器字符串匹配的节点列表**
 
     .. code-block:: javascript
 
@@ -137,17 +98,17 @@ Demo
         domNodes[0].nodeType == 1 // => true : Html Element
 
 
-    **找到页面第一个表单的所有输入框**
+    **找到表单内的所有输入框**
 
     .. code-block:: javascript
 
-        KISSY.all("input",document.forms[0]);
+        KISSY.all("input","form");
 
-    **设置页面的背景色为黑色**
+    **设置输入框的内容**
 
     .. code-block:: javascript
 
-        KISSY.all(document.body).css("background","black");
+        KISSY.all("input").val("12");
 
     **隐藏一个表单内的所有输入框**
 

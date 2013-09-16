@@ -4,12 +4,12 @@
 prependTo
 ========================================
 
-Module
+组件
 -----------------------------------------------
 
   :mod:`node`
 
-Methods
+方法
 -----------------------------------------------
 
 .. method:: NodeList.prependTo
@@ -19,7 +19,7 @@ Methods
     
     :param HTMLElement|string|NodeList content: 将要插入的内容
     
-        * HTMLElement|NodeList: 已有或新创建的节点
+        * HTMLElement|NodeList: 已有的节点
         * string: 选择器字符串, 查找已有的容器节点
     :rtype: NodeList
 
@@ -34,29 +34,7 @@ Methods
           <div class="inner">Goodbye</div>
         </div>
 
-    我们可以创建元素后立即插入到多个已有元素:
-
-    .. code-block:: javascript
-
-        KISSY.all('<p>Test</p>').prependTo('.inner');
-
-    每个内层 div 元素都得到了新内容
-
-    .. code-block:: html
-
-        <h2>Greetings</h2>
-        <div class="container">
-          <div class="inner">
-            <p>Test</p>
-            Hello
-          </div>
-          <div class="inner">
-            <p>Test</p>
-            Goodbye
-          </div>
-        </div>
-
-    我们也可以把一个已有元素插入到另一个
+    我们把一个已有元素插入到另一个
 
     .. code-block:: javascript
 
